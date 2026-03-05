@@ -9,16 +9,19 @@
 <body>
  <header class="navbar">
   <div class="logo">SAMEER</div>
-  <nav>
-    <ul>
-      <li><a href="#profile" class="active">Profile</a></li>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <nav class="navbar">
+  <div class="logo">Sameer</div>
+  <button class="menu-toggle">☰</button> <!-- ✅ hamburger -->
+  <ul>
+    <li><a href="#profile" class="active">Profile</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 </header>
 
   <!-- Profile Card -->
@@ -87,5 +90,14 @@
       expandable.classList.toggle('active');
     });
   </script>
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.navbar ul');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
