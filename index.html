@@ -19,7 +19,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#expandable">My Journey</a></li> <!-- Added -->
+    <li><a href="#expandable">My Journey</a></li>
   </ul>
 </nav>
 
@@ -67,6 +67,10 @@
   <!-- Contact Section -->
   <section id="contact" class="card">
     <h2>Contact</h2>
+
+    <!-- Success Banner -->
+    <div id="success-banner" class="success-banner">Message sent successfully!</div>
+
     <form action="https://formspree.io/f/mgolgzjy" method="POST" class="contact-form">
       <div class="form-group">
         <input type="text" name="name" placeholder="Name" class="capsule" required />
@@ -176,6 +180,32 @@
         overlayImg.src = img.src;
         overlay.classList.add('active');
       });
+    });
+
+    // Contact form success banner logic
+    const form = document.querySelector('.contact-form');
+    const banner = document.getElementById('success-banner');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // prevent redirect
+
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        banner.classList.add('show');
+        setTimeout(() => {
+          banner.classList.remove('show');
+        }, 3000);
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong.");
+      }
     });
   </script>
 

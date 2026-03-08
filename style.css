@@ -173,6 +173,24 @@ body {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
+.success-banner {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 128, 0, 0.7); /* transparent green */
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 3000;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.success-banner.show {
+  display: block;
+  opacity: 1;
+}
 
 /* Overlay for fullscreen image */
 .overlay {
