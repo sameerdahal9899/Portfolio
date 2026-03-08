@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header class="navbar">
+
+<!-- Navigation Bar -->
+<nav class="navbar">
   <div class="logo">SAMEER</div>
-  <nav class="navbar">
-  <div class="logo">Sameer</div>
-  <button class="menu-toggle">☰</button> <!-- ✅ hamburger -->
+  <button class="menu-toggle">☰</button>
   <ul>
     <li><a href="#profile" class="active">Profile</a></li>
     <li><a href="#home">Home</a></li>
@@ -19,28 +19,33 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#expandable">My Journey</a></li> <!-- Added -->
   </ul>
 </nav>
-
-</header>
 
   <!-- Profile Card -->
   <section id="profile" class="card profile-card">
     <img src="ppp.jpeg" alt="Sameer" class="profile-pic" />
-    <h2>Sameer</h2>
-    <p>Web Developer | UI/UX Enthusiast</p>
+    <h1>Sameer</h1>
+    <p>BCA student | Movie Enthusiast</p>
   </section>
+
+  <!-- Profile Photo Overlay -->
+  <div id="profile-overlay" class="overlay">
+    <span class="close-btn">&times;</span>
+    <img id="overlay-img" src="ppp.jpeg" alt="Profile Fullscreen">
+  </div>
 
   <!-- Home Section -->
   <section id="home" class="card">
     <h1>Hi, I'm Sameer</h1>
-    <p>Crafting digital experiences, one line of code at a time.</p>
+    <p>Crafting digital experiences, one line of code at a time. <br> I specialize in PHP, MySQL, and UI/UX design. Passionate about building interactive apps. </p>
   </section>
 
   <!-- About Section -->
   <section id="about" class="card">
     <h2>About Me</h2>
-    <p>I specialize in PHP, MySQL, and UI/UX design. Passionate about building interactive apps.</p>
+    <p>Hello, I’m Sameer Dahal, a Bachelor of Computer Application (BCA) student at Tribhuvan University. I have a strong interest in technology, web development, and digital systems. Alongside my studies, I have gained practical experience working as a billing officer, where I handled VAT and tax-related billing tasks. I enjoy learning new technologies, building useful web applications, and improving my technical and problem-solving skills. My goal is to grow as a skilled IT professional and create digital solutions that make everyday tasks easier..</p>
   </section>
 
   <!-- Projects Section -->
@@ -59,16 +64,24 @@
     <div class="skills capsule">PHP | MySQL | XAMPP | UI/UX</div>
   </section>
 
+  <!-- Contact Section -->
   <section id="contact" class="card">
-  <h2>Contact</h2>
-  <form action="https://formspree.io/f/mgolgzjy" method="POST">
-    <input type="text" name="name" placeholder="Name" class="capsule" required />
-    <input type="email" name="email" placeholder="Email" class="capsule" required />
-    <textarea name="message" placeholder="Message" class="capsule" required></textarea>
-    <button type="submit" class="capsule">Send</button>
-  </form>
-</section>
-
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/mgolgzjy" method="POST" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Name" class="capsule" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" class="capsule" required />
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Message" class="capsule" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="capsule">Send</button>
+      </div>
+    </form>
+  </section>
 
   <!-- Expandable Card Section -->
   <section id="expandable" class="card expandable-card">
@@ -78,26 +91,93 @@
     </div>
     <div class="card-content">
       <p>Here are some snapshots of my work and life.</p>
-      <img src="assets/images/work1.jpg" alt="Work sample" />
-      <img src="assets/images/work2.jpg" alt="Work sample" />
+      <div class="journey-grid">
+        <img src="1.jpeg" alt="Work sample" class="journey-img" />
+        <img src="2.jpeg" alt="Work sample" class="journey-img" />
+        <img src="3.jpeg" alt="Work sample" class="journey-img" />
+        <img src="4.jpeg" alt="Work sample" class="journey-img" />
+        <img src="5.jpeg" alt="Work sample" class="journey-img" />
+        <img src="6.jpeg" alt="Work sample" class="journey-img" />
+        <img src="7.jpeg" alt="Work sample" class="journey-img" />
+        <img src="8.jpeg" alt="Work sample" class="journey-img" />
+        <img src="9.jpeg" alt="Work sample" class="journey-img" />
+        <img src="10.jpeg" alt="Work sample" class="journey-img" />
+        <img src="11.jpeg" alt="Work sample" class="journey-img" />
+        <img src="12.jpeg" alt="Work sample" class="journey-img" />
+      </div>
     </div>
   </section>
 
-  <!-- Expandable Card Script -->
+  <!-- Scripts -->
   <script>
+    // Expandable card toggle
     const expandable = document.querySelector('.expandable-card');
     expandable.addEventListener('click', () => {
       expandable.classList.toggle('active');
     });
-  </script>
-  <script>
-  const toggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.navbar ul');
 
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.navbar ul');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Scroll-spy effect (fixed)
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll(".navbar ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navItems.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Overlay logic
+    const profilePic = document.querySelector('.profile-pic');
+    const overlay = document.getElementById('profile-overlay');
+    const closeBtn = document.querySelector('.close-btn');
+    const overlayImg = document.getElementById('overlay-img');
+
+    // Open overlay
+    profilePic.addEventListener('click', () => {
+      overlayImg.src = profilePic.src;
+      overlay.classList.add('active');
+    });
+
+    // Close overlay with button
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+
+    // Close overlay when clicking outside the image
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+
+    // Journey images fullscreen
+    const journeyImgs = document.querySelectorAll('.journey-img');
+    journeyImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        overlayImg.src = img.src;
+        overlay.classList.add('active');
+      });
+    });
+  </script>
 
 </body>
 </html>

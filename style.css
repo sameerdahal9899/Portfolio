@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Top Navigation Bar */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 20px;
@@ -63,7 +63,7 @@ body {
   color: #007aff;
 }
 
-/* Hamburger Button (hidden on desktop) */
+/* Hamburger */
 .menu-toggle {
   display: none;
   background: none;
@@ -73,7 +73,7 @@ body {
   cursor: pointer;
 }
 
-/* Card Style */
+/* Card */
 .card {
   margin-top: 140px;
   width: 80%;
@@ -99,11 +99,32 @@ body {
               0 12px 35px rgba(0,0,0,0.35);
 }
 
+/* Profile */
+.profile-card {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
 /* Capsule Inputs & Buttons */
 .capsule {
   border-radius: 50px;
   padding: 12px 20px;
-  margin: 12px 0;
   border: none;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(25px) saturate(200%);
@@ -118,61 +139,149 @@ body {
   max-width: 100%;
 }
 
-input.capsule, textarea.capsule, button.capsule {
-  width: 100%;
-  display: block;
-  margin-bottom: 15px;
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-textarea.capsule {
+.contact-form input.capsule,
+.contact-form textarea.capsule,
+.contact-form button.capsule {
+  width: 100%;
+  margin: 0;
+}
+
+.contact-form textarea.capsule {
   min-height: 120px;
   resize: none;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
+  padding: 15px 20px;
+  line-height: 1.4;
 }
 
-button.capsule {
-  cursor: pointer;
+.contact-form button.capsule {
   font-weight: bold;
   color: #007aff;
   text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button.capsule:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Overlay for fullscreen image */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transform: scale(0.7);
+  transition: transform 0.4s ease;
+}
+
+.overlay.active img {
+  transform: scale(1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Grid layout for journey images */
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.journey-img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.journey-img:hover {
+  transform: scale(1.05);
+}
+
+/* Expandable Card with smooth animation */
+.expandable-card .card-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease, margin-top 0.6s ease;
+}
+
+.expandable-card.active .card-content {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.expandable-card {
+  margin-bottom: 100px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Hide navbar completely on mobile */
   .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-    justify-content: space-between;
-    padding: 12px 20px;
-  }
-
-  .menu-toggle {
-    display: block; /* ✅ show hamburger on mobile */
-  }
-
-  .navbar ul {
-    display: none; /* ✅ hide links initially */
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(30px);
-    border-radius: 10px;
-    padding: 10px;
-  }
-
-  .navbar ul.show {
-    display: flex; /* ✅ show when toggled */
+    display: none;
   }
 
   .card {
-    margin-top: 120px;
+    margin-top: 40px;
     width: 95%;
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+
+  .journey-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .contact-form {
+    gap: 10px;
+  }
+
+  .contact-form textarea.capsule {
+    min-height: 100px;
   }
 }
