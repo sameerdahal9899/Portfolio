@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sameer | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -23,191 +25,273 @@
   </ul>
 </nav>
 
-  <!-- Profile Card -->
-  <section id="profile" class="card profile-card">
-    <img src="ppp.jpeg" alt="Sameer" class="profile-pic" />
-    <h1>Sameer</h1>
-    <p>BCA student | Movie Enthusiast</p>
-  </section>
+<!-- Profile Card -->
+<section id="profile" class="card profile-card">
+  <img src="ppp.jpeg" alt="Sameer" class="profile-pic" />
+  <h1>Sameer</h1>
+  <p>BCA student | Movie Enthusiast</p>
+</section>
 
-  <!-- Profile Photo Overlay -->
-  <div id="profile-overlay" class="overlay">
-    <span class="close-btn">&times;</span>
-    <img id="overlay-img" src="ppp.jpeg" alt="Profile Fullscreen">
+<!-- Profile Photo Overlay -->
+<div id="profile-overlay" class="overlay">
+  <span class="close-btn">&times;</span>
+  <img id="overlay-img" src="ppp.jpeg" alt="Profile Fullscreen">
+</div>
+
+<!-- Home Section -->
+<section id="home" class="card">
+  <h1>Hi, I'm Sameer</h1>
+  <p>Crafting digital experiences, one line of code at a time. <br> I specialize in PHP, MySQL, and UI/UX design. Passionate about building interactive apps. </p>
+</section>
+
+<!-- About Section -->
+<section id="about" class="card">
+  <h2>About Me</h2>
+  <p>Hello, I’m Sameer Dahal, a Bachelor of Computer Application (BCA) student at Tribhuvan University. I have a strong interest in technology, web development, and digital systems. Alongside my studies, I have gained practical experience working as a billing officer, where I handled VAT and tax-related billing tasks. I enjoy learning new technologies, building useful web applications, and improving my technical and problem-solving skills. My goal is to grow as a skilled IT professional and create digital solutions that make everyday tasks easier..</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="card">
+  <h2>Projects</h2>
+  <div class="project-list">
+    <div class="project capsule">Student Complaint System</div>
+    <div class="project capsule">Task Management App</div>
+    <div class="project capsule">Portfolio Website</div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="card">
+  <h2>Skills</h2>
+  <div class="skills capsule">PHP | MySQL | XAMPP | UI/UX</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="card">
+  <h2>Contact</h2>
+
+  <!-- Success Banner -->
+  <div id="success-banner" class="success-banner">Message sent successfully!</div>
+
+  <form action="https://formspree.io/f/mgolgzjy" method="POST" class="contact-form">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Name" class="capsule" required />
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Email" class="capsule" required />
+    </div>
+    <div class="form-group">
+      <textarea name="message" placeholder="Message" class="capsule" required></textarea>
+    </div>
+
+    <!-- Inline error message -->
+    <div id="error-message" class="error-message"></div>
+
+    <div class="form-group">
+      <button type="submit" class="capsule">Send</button>
+    </div>
+  </form>
+</section>
+
+<!-- Expandable Card Section -->
+<section id="expandable" class="card expandable-card">
+  <div class="card-header">
+    <h2>My Journey</h2>
+    <p>Click to see more...</p>
+  </div>
+  <div class="card-content">
+    <p>Here are some snapshots of my work and life.</p>
+    <div class="journey-grid">
+      <img src="1.jpeg" alt="Work sample" class="journey-img" />
+      <img src="2.jpeg" alt="Work sample" class="journey-img" />
+      <img src="3.jpeg" alt="Work sample" class="journey-img" />
+      <img src="4.jpeg" alt="Work sample" class="journey-img" />
+      <img src="5.jpeg" alt="Work sample" class="journey-img" />
+      <img src="6.jpeg" alt="Work sample" class="journey-img" />
+      <img src="7.jpeg" alt="Work sample" class="journey-img" />
+      <img src="8.jpeg" alt="Work sample" class="journey-img" />
+      <img src="9.jpeg" alt="Work sample" class="journey-img" />
+      <img src="10.jpeg" alt="Work sample" class="journey-img" />
+      <img src="11.jpeg" alt="Work sample" class="journey-img" />
+      <img src="12.jpeg" alt="Work sample" class="journey-img" />
+    </div>
+  </div>
+</section>
+<!-- Glass Footer -->
+<footer class="glass-footer">
+  <div class="footer-container">
+
+    <!-- Overview -->
+    <div class="footer-section overview">
+      <h3>Overview</h3>
+      <p>Explore my professional portfolio showcasing my best work.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:sameerdahal9899@gmail.com">sameerdahal9899@gmail.com</a></p>
+      <div class="social-icons">
+  <a href="https://www.linkedin.com/in/sameer-dahal-419459267/" target="_blank" aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+  <a href="https://wa.me/9779845482186" target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="https://www.instagram.com/be_a_sameer/" target="_blank" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+    </div>
+
+    <!-- Services -->
+    <div class="footer-section services">
+      <h3>Services</h3>
+      <form class="newsletter-form">
+        <input type="email" placeholder="example@example.com" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </div>
 
-  <!-- Home Section -->
-  <section id="home" class="card">
-    <h1>Hi, I'm Sameer</h1>
-    <p>Crafting digital experiences, one line of code at a time. <br> I specialize in PHP, MySQL, and UI/UX design. Passionate about building interactive apps. </p>
-  </section>
+  <div class="footer-bottom">
+    <p>© 2026. All rights reserved.</p>
+  </div>
+</footer>
 
-  <!-- About Section -->
-  <section id="about" class="card">
-    <h2>About Me</h2>
-    <p>Hello, I’m Sameer Dahal, a Bachelor of Computer Application (BCA) student at Tribhuvan University. I have a strong interest in technology, web development, and digital systems. Alongside my studies, I have gained practical experience working as a billing officer, where I handled VAT and tax-related billing tasks. I enjoy learning new technologies, building useful web applications, and improving my technical and problem-solving skills. My goal is to grow as a skilled IT professional and create digital solutions that make everyday tasks easier..</p>
-  </section>
+<!-- Scripts -->
+<script>
+  // Expandable card toggle
+  const expandable = document.querySelector('.expandable-card');
+  expandable.addEventListener('click', () => {
+    expandable.classList.toggle('active');
+  });
 
-  <!-- Projects Section -->
-  <section id="projects" class="card">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project capsule">Student Complaint System</div>
-      <div class="project capsule">Task Management App</div>
-      <div class="project capsule">Portfolio Website</div>
-    </div>
-  </section>
+  // Mobile menu toggle
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.navbar ul');
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
 
-  <!-- Skills Section -->
-  <section id="skills" class="card">
-    <h2>Skills</h2>
-    <div class="skills capsule">PHP | MySQL | XAMPP | UI/UX</div>
-  </section>
+  // Scroll-spy effect
+  const sections = document.querySelectorAll("section");
+  const navItems = document.querySelectorAll(".navbar ul li a");
 
-  <!-- Contact Section -->
-  <section id="contact" class="card">
-    <h2>Contact</h2>
-
-    <!-- Success Banner -->
-    <div id="success-banner" class="success-banner">Message sent successfully!</div>
-
-    <form action="https://formspree.io/f/mgolgzjy" method="POST" class="contact-form">
-      <div class="form-group">
-        <input type="text" name="name" placeholder="Name" class="capsule" required />
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder="Email" class="capsule" required />
-      </div>
-      <div class="form-group">
-        <textarea name="message" placeholder="Message" class="capsule" required></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="capsule">Send</button>
-      </div>
-    </form>
-  </section>
-
-  <!-- Expandable Card Section -->
-  <section id="expandable" class="card expandable-card">
-    <div class="card-header">
-      <h2>My Journey</h2>
-      <p>Click to see more...</p>
-    </div>
-    <div class="card-content">
-      <p>Here are some snapshots of my work and life.</p>
-      <div class="journey-grid">
-        <img src="1.jpeg" alt="Work sample" class="journey-img" />
-        <img src="2.jpeg" alt="Work sample" class="journey-img" />
-        <img src="3.jpeg" alt="Work sample" class="journey-img" />
-        <img src="4.jpeg" alt="Work sample" class="journey-img" />
-        <img src="5.jpeg" alt="Work sample" class="journey-img" />
-        <img src="6.jpeg" alt="Work sample" class="journey-img" />
-        <img src="7.jpeg" alt="Work sample" class="journey-img" />
-        <img src="8.jpeg" alt="Work sample" class="journey-img" />
-        <img src="9.jpeg" alt="Work sample" class="journey-img" />
-        <img src="10.jpeg" alt="Work sample" class="journey-img" />
-        <img src="11.jpeg" alt="Work sample" class="journey-img" />
-        <img src="12.jpeg" alt="Work sample" class="journey-img" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Scripts -->
-  <script>
-    // Expandable card toggle
-    const expandable = document.querySelector('.expandable-card');
-    expandable.addEventListener('click', () => {
-      expandable.classList.toggle('active');
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
     });
 
-    // Mobile menu toggle
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.navbar ul');
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    navItems.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
     });
+  });
 
-    // Scroll-spy effect (fixed)
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll(".navbar ul li a");
+  // Overlay logic
+  const profilePic = document.querySelector('.profile-pic');
+  const overlay = document.getElementById('profile-overlay');
+  const closeBtn = document.querySelector('.close-btn');
+  const overlayImg = document.getElementById('overlay-img');
 
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-          current = section.getAttribute("id");
-        }
-      });
+  profilePic.addEventListener('click', () => {
+    overlayImg.src = profilePic.src;
+    overlay.classList.add('active');
+  });
 
-      navItems.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-          link.classList.add("active");
-        }
-      });
-    });
+  closeBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
+  });
 
-    // Overlay logic
-    const profilePic = document.querySelector('.profile-pic');
-    const overlay = document.getElementById('profile-overlay');
-    const closeBtn = document.querySelector('.close-btn');
-    const overlayImg = document.getElementById('overlay-img');
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+    }
+  });
 
-    // Open overlay
-    profilePic.addEventListener('click', () => {
-      overlayImg.src = profilePic.src;
+  const journeyImgs = document.querySelectorAll('.journey-img');
+  journeyImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      overlayImg.src = img.src;
       overlay.classList.add('active');
     });
+  });
 
-    // Close overlay with button
-    closeBtn.addEventListener('click', () => {
-      overlay.classList.remove('active');
-    });
+  // Contact form with email verification
+  const form = document.querySelector('.contact-form');
+  const banner = document.getElementById('success-banner');
+  const errorBox = document.getElementById('error-message');
 
-    // Close overlay when clicking outside the image
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        overlay.classList.remove('active');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const email = formData.get("email");
+
+    // Reset error message
+    errorBox.textContent = "";
+    errorBox.classList.remove("show");
+
+    // Basic regex check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailPattern.test(email)) {
+      errorBox.textContent = "Please enter a valid email format.";
+      errorBox.classList.add("show");
+      return;
+    }
+
+        // Verify email existence via Mailboxlayer API
+    try {
+      const verifyResponse = await fetch(
+        `https://apilayer.net/api/check?access_key=8a645924ee2d6c4d980432817b5f1c5e&email=${encodeURIComponent(email)}`
+      );
+      const verifyData = await verifyResponse.json();
+
+      if (!verifyData.format_valid || !verifyData.smtp_check) {
+        errorBox.textContent = "This email address does not exist. Please use a real one.";
+        errorBox.classList.add("show");
+        return;
       }
-    });
 
-    // Journey images fullscreen
-    const journeyImgs = document.querySelectorAll('.journey-img');
-    journeyImgs.forEach(img => {
-      img.addEventListener('click', () => {
-        overlayImg.src = img.src;
-        overlay.classList.add('active');
-      });
-    });
-
-    // Contact form success banner logic
-    const form = document.querySelector('.contact-form');
-    const banner = document.getElementById('success-banner');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // prevent redirect
-
-      const formData = new FormData(form);
-
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        banner.classList.add('show');
-        setTimeout(() => {
-          banner.classList.remove('show');
-        }, 3000);
-        form.reset();
-      } else {
-        alert("Oops! Something went wrong.");
+      if (verifyData.disposable) {
+        errorBox.textContent = "Disposable email addresses are not allowed.";
+        errorBox.classList.add("show");
+        return;
       }
+    } catch (error) {
+      errorBox.textContent = "Error verifying email. Please try again.";
+      errorBox.classList.add("show");
+      return;
+    }
+
+    // If passes, send form
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
     });
-  </script>
+
+    if (response.ok) {
+      banner.classList.add('show');
+      setTimeout(() => {
+        banner.classList.remove('show');
+      }, 3000);
+      form.reset();
+    } else {
+      errorBox.textContent = "Oops! Something went wrong.";
+      errorBox.classList.add("show");
+    }
+  });
+</script>
 
 </body>
 </html>
