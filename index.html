@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en" data-theme="dark">
+=======
+<html lang="en">
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,6 +43,7 @@
       --muted: rgba(255,255,255,0.55);
       --radius: 22px;
       --transition: 0.45s cubic-bezier(0.16,1,0.3,1);
+<<<<<<< HEAD
 
       /* theme vars */
       --body-bg-dark1: rgba(4,8,18,0.72);
@@ -112,6 +117,10 @@
     [data-theme="light"] .clock-time { color: var(--text); }
     [data-theme="light"] .clock-label { color: var(--muted); }
 
+=======
+    }
+
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
     body {
@@ -122,9 +131,15 @@
       background:
         linear-gradient(135deg, rgba(4,8,18,0.72) 0%, rgba(6,14,28,0.65) 50%, rgba(8,6,20,0.72) 100%),
         url('bg.jpg') center/cover fixed no-repeat;
+<<<<<<< HEAD
       transition: background 0.6s ease, color 0.4s ease;
     }
 
+=======
+    }
+
+    /* grain overlay */
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     body::before {
       content: '';
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -133,7 +148,11 @@
     }
 
     .bg-canvas { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+<<<<<<< HEAD
     .bg-orb { position: absolute; border-radius: 50%; filter: blur(100px); animation: orbFloat 14s ease-in-out infinite alternate; transition: background 0.6s; }
+=======
+    .bg-orb { position: absolute; border-radius: 50%; filter: blur(100px); animation: orbFloat 14s ease-in-out infinite alternate; }
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     .bg-orb:nth-child(1) { width:700px;height:700px;background:rgba(79,159,255,0.12);top:-15%;left:-15%;animation-delay:0s; }
     .bg-orb:nth-child(2) { width:600px;height:600px;background:rgba(79,255,206,0.09);top:35%;right:-10%;animation-delay:-5s; }
     .bg-orb:nth-child(3) { width:500px;height:500px;background:rgba(160,79,255,0.09);bottom:-10%;left:25%;animation-delay:-9s; }
@@ -153,6 +172,10 @@
       position: relative;
       transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
     }
+<<<<<<< HEAD
+=======
+    /* refractive gradient border */
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     .glass::before {
       content: '';
       position: absolute; inset: -1px;
@@ -172,6 +195,10 @@
       padding: 1px; pointer-events: none; z-index: 0;
       transition: opacity var(--transition);
     }
+<<<<<<< HEAD
+=======
+    /* specular sheen */
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     .glass::after {
       content: '';
       position: absolute; inset: 0; border-radius: var(--radius);
@@ -197,18 +224,30 @@
       background: linear-gradient(120deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.05) 35%, transparent 55%);
     }
 
+<<<<<<< HEAD
     /* ═══ NAVBAR ═══ */
     nav {
       position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
       z-index: 1000; display: flex; align-items: center; gap: 8px; padding: 10px 16px;
       background: var(--nav-bg);
+=======
+    /* NAVBAR */
+    nav {
+      position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+      z-index: 1000; display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+      background: rgba(10,15,30,0.4);
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
       backdrop-filter: blur(40px) saturate(200%);
       -webkit-backdrop-filter: blur(40px) saturate(200%);
       border-radius: 60px;
       box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1);
       border: 1px solid transparent;
+<<<<<<< HEAD
       white-space: nowrap;
       transition: background 0.5s ease;
+=======
+      white-space: nowrap; position: fixed;
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     }
     nav::before {
       content:''; position:absolute; inset:-1px; border-radius:61px;
@@ -220,7 +259,11 @@
       padding:1px; pointer-events:none; z-index:0;
     }
     nav > * { position: relative; z-index: 1; }
+<<<<<<< HEAD
     .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--accent); margin-right: 8px; letter-spacing: 0.05em; transition: color 0.4s; }
+=======
+    .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--accent); margin-right: 8px; letter-spacing: 0.05em; }
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     nav ul { list-style: none; display: flex; gap: 4px; position: relative; }
     .nav-bubble {
       position: absolute; top: 50%; transform: translateY(-50%);
@@ -229,7 +272,10 @@
       box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 2px 8px rgba(0,0,0,0.3);
       border: 1px solid rgba(255,255,255,0.22);
       pointer-events: none; z-index: 0; will-change: left, width;
+<<<<<<< HEAD
       transition: background 0.4s, border-color 0.4s;
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     }
     nav ul li a {
       position: relative; z-index: 1; display: block; padding: 7px 16px;
@@ -240,6 +286,7 @@
     nav ul li a.active { color: var(--accent); }
     .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; }
 
+<<<<<<< HEAD
     /* ═══ NAV RIGHT GROUP ═══ */
     .nav-right {
       display: flex; align-items: center; gap: 10px;
@@ -381,6 +428,8 @@
       to   { width: 80px; height: 80px; opacity: 0; }
     }
 
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     section { margin-top: 100px; }
 
     /* HERO */
@@ -388,8 +437,13 @@
     .hero-text-card { padding: 52px 48px; }
     .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
     .hero-eyebrow::before { content:''; display:block; width:24px; height:2px; background:var(--accent); }
+<<<<<<< HEAD
     .hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem,5vw,4.2rem); line-height: 1.1; margin-bottom: 16px; background: linear-gradient(135deg,#fff 30%,var(--accent) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; transition: background 0.4s; }
     .hero-tagline { font-size: 1.05rem; color: var(--muted); line-height: 1.7; margin-bottom: 32px; transition: color 0.4s; }
+=======
+    .hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(2.8rem,5vw,4.2rem); line-height: 1.1; margin-bottom: 16px; background: linear-gradient(135deg,#fff 30%,var(--accent) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .hero-tagline { font-size: 1.05rem; color: var(--muted); line-height: 1.7; margin-bottom: 32px; }
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-primary {
       padding: 13px 28px; border-radius: 40px;
@@ -437,7 +491,11 @@
 
     /* ABOUT */
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+<<<<<<< HEAD
     .about-text { font-size:1rem; color:rgba(255,255,255,0.8); line-height:1.8; transition: color 0.4s; }
+=======
+    .about-text { font-size:1rem; color:rgba(255,255,255,0.8); line-height:1.8; }
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     .about-details { display:flex; flex-direction:column; gap:13px; }
     .detail-item {
       display:flex; align-items:flex-start; gap:14px; padding:14px 16px; border-radius:14px;
@@ -550,7 +608,10 @@
       border-radius:28px 28px 0 0;
       border:1px solid rgba(255,255,255,0.12); border-bottom:none;
       box-shadow:0 -1px 0 rgba(255,255,255,0.08),0 1px 0 rgba(255,255,255,0.25) inset;
+<<<<<<< HEAD
       transition: background 0.5s, border-color 0.4s;
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     }
     .footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:48px; margin-bottom:40px; }
     .footer-brand .brand-name { font-family:'DM Serif Display',serif; font-size:1.6rem; background:linear-gradient(135deg,#fff,var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:12px; }
@@ -568,6 +629,7 @@
     .footer-newsletter button { width:100%; padding:11px; border-radius:10px; background:linear-gradient(135deg,rgba(79,255,206,0.85),rgba(79,159,255,0.75)); border:none; color:#040810; font-weight:700; font-size:0.88rem; cursor:pointer; transition:all 0.3s; box-shadow:0 1px 0 rgba(255,255,255,0.5) inset; }
     .footer-newsletter button:hover { filter:brightness(1.1); transform:translateY(-1px); }
     .footer-bottom { border-top:1px solid rgba(255,255,255,0.08); padding-top:24px; display:flex; align-items:center; justify-content:space-between; }
+<<<<<<< HEAD
     .footer-bottom p { font-size:0.82rem; color:var(--muted); transition: color 0.4s; }
 
     /* ═══ FLOATING WHATSAPP BUTTON ═══ */
@@ -607,11 +669,15 @@
     .whatsapp-float:active {
       transform: translateY(-4px) scale(1.08);
     }
+=======
+    .footer-bottom p { font-size:0.82rem; color:var(--muted); }
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
 
     .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1),transform 0.8s cubic-bezier(0.16,1,0.3,1); }
     .reveal.visible { opacity:1; transform:translateY(0); }
 
     @media (max-width:900px) {
+<<<<<<< HEAD
       /* Mobile Navigation */
       nav { 
         left:16px; 
@@ -662,6 +728,13 @@
       .nav-bubble { display:none; }
       
       /* Layout */
+=======
+      nav ul { display:none; }
+      nav ul.show { display:flex; flex-direction:column; position:absolute; top:70px; left:0; right:0; background:rgba(8,14,28,0.95); backdrop-filter:blur(40px); border-radius:20px; padding:12px; border:1px solid rgba(255,255,255,0.15); }
+      .menu-toggle { display:block; }
+      nav { left:16px; right:16px; transform:none; top:16px; justify-content:space-between; }
+      .nav-bubble { display:none; }
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
       #hero { grid-template-columns:1fr; }
       .hero-text-card { order:2; padding:36px 28px; }
       .hero-profile-card { order:1; }
@@ -677,6 +750,7 @@
       .footer-grid { grid-template-columns:1fr; }
       .journey-header { padding:24px 24px 20px; }
       .journey-inner { padding:20px 24px 30px; }
+<<<<<<< HEAD
       .clock-time { font-size: 0.7rem; }
       nav ul li a { padding: 6px 12px; font-size: 0.8rem; }
       
@@ -689,6 +763,8 @@
         right: 20px;
         box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset, 0 8px 30px rgba(37,211,102,0.3), 0 3px 8px rgba(0,0,0,0.3);
       }
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
     }
   </style>
 </head>
@@ -702,8 +778,12 @@
 
 <nav id="navbar">
   <span class="nav-logo">Sameer</span>
+<<<<<<< HEAD
   
   <!-- Desktop Navigation Links -->
+=======
+  <button class="menu-toggle">&#9776;</button>
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
   <ul id="nav-links">
     <div class="nav-bubble" id="nav-bubble"></div>
     <li><a href="#hero" class="active">Home</a></li>
@@ -713,6 +793,7 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#journey">Journey</a></li>
   </ul>
+<<<<<<< HEAD
 
   <!-- Center: Clock Widget (visible on mobile) -->
   <div class="nav-center">
@@ -755,6 +836,8 @@
     <!-- Hamburger Menu Toggle -->
     <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
   </div>
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
 </nav>
 
 <div id="overlay" class="overlay">
@@ -766,18 +849,25 @@
   <i class="fa-solid fa-circle-check"></i> Message sent successfully!
 </div>
 
+<<<<<<< HEAD
 <!-- Floating WhatsApp Button -->
 <a href="https://wa.me/9779845482186" target="_blank" class="whatsapp-float" title="Message us on WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
 <div class="site-wrapper">
 
   <section id="hero">
     <div class="glass hero-text-card reveal">
       <span class="hero-eyebrow">Welcome to my portfolio</span>
       <h1 class="hero-name">Sameer<br>Dahal</h1>
+<<<<<<< HEAD
       <p class="hero-tagline">Crafting digital experiences, one line of code at a time.<br>learning PHP, MySQL &amp; many more.</p>
+=======
+      <p class="hero-tagline">Crafting digital experiences, one line of code at a time.<br>learning PHP, MySQL &amp;.</p>
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
       <div class="hero-cta-row">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-ghost">Get in Touch</a>
@@ -813,7 +903,11 @@
           <div class="detail-item"><div class="detail-icon"><i class="fa-solid fa-graduation-cap"></i></div><div class="detail-content"><strong>Education</strong><span>BCA &mdash; Tribhuvan University</span></div></div>
           <div class="detail-item"><div class="detail-icon"><i class="fa-solid fa-briefcase"></i></div><div class="detail-content"><strong>Experience</strong><span>Billing Officer &middot; Sales &amp; Marketing</span></div></div>
           <div class="detail-item"><div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div><div class="detail-content"><strong>Location</strong><span>Nepal</span></div></div>
+<<<<<<< HEAD
           <div class="detail-item"><div class="detail-icon"><i class="fa-solid fa-heart"></i></div><div class="detail-content"><strong>Interests</strong><span>Web Dev &middot; Movies &middot; Music &middot; Video Editing &middot;  </span></div></div>
+=======
+          <div class="detail-item"><div class="detail-icon"><i class="fa-solid fa-heart"></i></div><div class="detail-content"><strong>Interests</strong><span>Web Dev &middot; Movies &middot; Music</span></div></div>
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
           <div class="detail-item"><div class="detail-icon"><i class="fa-solid fa-envelope"></i></div><div class="detail-content"><strong>Email</strong><span>sameerdahal9899@gmail.com</span></div></div>
         </div>
       </div>
@@ -854,8 +948,12 @@
         <div class="skill-category"><h4>Backend</h4><div class="skill-tags"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">XAMPP</span></div></div>
         <div class="skill-category"><h4>Frontend</h4><div class="skill-tags"><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span></div></div>
         <div class="skill-category"><h4>Design</h4><div class="skill-tags"><span class="skill-tag">UI/UX</span></div></div>
+<<<<<<< HEAD
         <div class="skill-category"><h4>Other</h4><div class="skill-tags"><span class="skill-tag">Video Editing</span><span class="skill-tag">communicating professionally</span><span class="skill-tag">Git</span><span class="skill-tag">Problem Solving</span></div></div>
         
+=======
+        <div class="skill-category"><h4>Other</h4><div class="skill-tags"><span class="skill-tag">communicating professionally</span><span class="skill-tag">Git</span><span class="skill-tag">Problem Solving</span></div></div>
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
       </div>
     </div>
   </section>
@@ -952,10 +1050,14 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Sameer Dahal. All rights reserved.</p>
+<<<<<<< HEAD
     <p>
 <i class="fa-solid fa-spider" style="font-size:10px;"></i>   With great POWER comes great RESPONSIBILITY.
 </p>
 
+=======
+    <p>Made with <span style="color:var(--accent)">&#9829;</span> in Nepal</p>
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
   </div>
 </footer>
 
@@ -1015,6 +1117,7 @@ var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if
 document.querySelectorAll('.reveal').forEach(function(r){ro.observe(r);});
 
 // ═══ MOBILE MENU ═══
+<<<<<<< HEAD
 (function() {
   var menuToggle = document.querySelector('.menu-toggle');
   var navLinks = document.getElementById('nav-links');
@@ -1046,6 +1149,9 @@ document.querySelectorAll('.reveal').forEach(function(r){ro.observe(r);});
     e.stopPropagation();
   });
 })();
+=======
+document.querySelector('.menu-toggle').addEventListener('click',function(){document.getElementById('nav-links').classList.toggle('show');});
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
 
 // ═══ IMAGE OVERLAY ═══
 var overlay=document.getElementById('overlay'),overlayImg=document.getElementById('overlay-img');
@@ -1069,6 +1175,7 @@ form.addEventListener('submit',async function(e){
   try{var vr=await fetch('https://apilayer.net/api/check?access_key=8a645924ee2d6c4d980432817b5f1c5e&email='+encodeURIComponent(email));var vd=await vr.json();if(!vd.format_valid||!vd.smtp_check){errorBox.textContent='This email address does not exist. Please use a real one.';errorBox.classList.add('show');return;}if(vd.disposable){errorBox.textContent='Disposable email addresses are not allowed.';errorBox.classList.add('show');return;}}catch(err){errorBox.textContent='Error verifying email. Please try again.';errorBox.classList.add('show');return;}
   try{var res=await fetch(form.action,{method:form.method,body:formData,headers:{Accept:'application/json'}});if(res.ok){banner.classList.add('show');setTimeout(function(){banner.classList.remove('show');},3500);form.reset();}else{errorBox.textContent='Oops! Something went wrong.';errorBox.classList.add('show');}}catch(err){errorBox.textContent='Network error. Please check your connection.';errorBox.classList.add('show');}
 });
+<<<<<<< HEAD
 
 // ═══════════════════════════════════════════════
 // ═══ KATHMANDU LIVE CLOCK (UTC+5:45) ═══
@@ -1193,6 +1300,8 @@ form.addEventListener('submit',async function(e){
     localStorage.setItem('sameer-theme', next);
   });
 })();
+=======
+>>>>>>> 4cb324b3bb5c98c0420991b53da59d8295683a50
 </script>
 </body>
 </html>
